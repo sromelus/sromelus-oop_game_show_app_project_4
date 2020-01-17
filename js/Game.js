@@ -36,7 +36,7 @@
    }
 
    removeLife(){
-     const scoreboard = document.querySelectorAll('#scoreboard im')
+     const scoreboard = document.querySelectorAll('#scoreboard img')
      scoreboard[this.missed].src = "images/lostHeart.png"
      this.missed += 1;
      if(this.missed === 5){
@@ -70,6 +70,15 @@
      buttonReset.innerText = 'Play Again';
    }
 
+   resetGame(){
+     document.querySelector('#phrase ul').innerHTML = '';
+     document.querySelectorAll('#qwerty button').forEach(button => {
+       button.className = 'key';
+     })
+     document.querySelectorAll('#scoreboard img').forEach(li => {
+       li.src = "images/liveHeart.png"
+     })
+   }
  }
 
 
