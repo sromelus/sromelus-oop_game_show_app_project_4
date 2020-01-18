@@ -38,18 +38,3 @@
      })
    }
  }
-
- // const qwerty = document.querySelector('#qwerty');
- // const phraseLetters = document.querySelectorAll('#phrase li')
- //
- // qwerty.addEventListener('click', (e) => {
- //   const clickedLetter = e.target.innerText;
- //   phraseLetters.forEach(letter =>  {
- //     if(letter.innerText === clickedLetter ){
- //       return true
- //     } else {
- //       console.log(false);
- //       return false
- //     }
- //   })
- // });
