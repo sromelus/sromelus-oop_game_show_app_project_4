@@ -3,27 +3,30 @@
  * app.js */
 
  const phrasesArray = [
-   'America is a very powerfull contry',
-   'The game had begun',
+   'Hii Airpockets baby',
+   'I love your ass',
    'The pencil is long',
    'I am doing my work',
-   'Trump is the current president',
-   'I love watching TV'
+   'Dance',
+   'I love instagram'
  ]
 
 let game1;
 
  document.querySelector('#overlay').addEventListener('click', () =>{
    game1 = new Game(0, phrasesArray);
+   game1.resetGame();
    game1.startGame();
    document.querySelector('#overlay').style.display = 'none'
  })
 
- document.querySelectorAll('#qwerty').addEventListener('click', (e) => {
-   game1.handleInteraction(e.target);
+ document.querySelector('#qwerty').addEventListener('click', (e) => {
+   if(e.target.tagName === 'BUTTON'){
+     game1.handleInteraction(e.target);
+   }
  });
 
-
+// `${e.target.innerText}`
 
   // const phraseLetters = document.querySelectorAll('#phrase li');
 //  let li =  document.createElement('li');

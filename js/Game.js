@@ -22,16 +22,16 @@
    }
 
    handleInteraction(button){
-     button.setAttribute("disabled", "")
+     button.setAttribute("disabled", "");
      if(this.activePhrase.checkLetter(button.innerText)){
        button.className = 'chosen';
-       this.activePhrase.showMatchedLetter(button.innerText)
+       this.activePhrase.showMatchLetter(button.innerText)
        if(this.checkForWin()){
-         thid.gameOver();
+         this.gameOver();
        }
      } else {
-       button.className = 'wrong'
-       this.removeLife()
+       button.className = 'wrong';
+       this.removeLife();
      }
    }
 
@@ -74,6 +74,7 @@
      document.querySelector('#phrase ul').innerHTML = '';
      document.querySelectorAll('#qwerty button').forEach(button => {
        button.className = 'key';
+       button.disabled = false;
      })
      document.querySelectorAll('#scoreboard img').forEach(li => {
        li.src = "images/liveHeart.png"
