@@ -13,12 +13,35 @@
 
 let game1;
 
- document.querySelector('#overlay').addEventListener('click', () =>{
+document.querySelector('#btn__reset').addEventListener('mouseover', () =>{
+  document.querySelector('.title').classList.add('animate');
+})
+
+document.querySelector('#btn__reset').addEventListener('mouseleave', () =>{
+  document.querySelector('.title').classList.remove('animate');
+})
+
+ document.querySelector('#btn__reset').addEventListener('click', () =>{
    game1 = new Game(0, phrasesArray);
    game1.resetGame();
    game1.startGame();
-   document.querySelector('#overlay').style.display = 'none'
  })
+
+ document.addEventListener("keypress", (e) => {
+   if(document.querySelector('#overlay').style.display === 'none'){
+     document.querySelectorAll('#qwerty button').forEach(button =>{
+       if(e.key === button.innerText && button.className === 'key'){
+         game1.handleInteraction(button);
+       }
+     });
+   } else {
+     if(e.key === ' '){
+       game1 = new Game(0, phrasesArray);
+       game1.resetGame();
+       game1.startGame();
+     }
+   }
+ });
 
  document.querySelector('#qwerty').addEventListener('click', (e) => {
    if(e.target.tagName === 'BUTTON'){

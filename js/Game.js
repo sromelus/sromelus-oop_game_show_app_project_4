@@ -39,8 +39,14 @@
      const scoreboard = document.querySelectorAll('#scoreboard img')
      scoreboard[this.missed].src = "images/lostHeart.png"
      this.missed += 1;
+
+     if(this.missed === 4){
+       document.querySelector('.main-container').classList.add('onelife');
+     }
+
      if(this.missed === 5){
        this.gameOver();
+       document.querySelector('.main-container').classList.remove('onelife');
      }
    }
 
