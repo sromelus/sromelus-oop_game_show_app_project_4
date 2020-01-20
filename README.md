@@ -1,5 +1,7 @@
 # Phrase Hunter game
 
+Game Preview -  https://sromelus.github.io/sromelus-oop_game_show_app_project_4/
+
 Phrase Hunter is a game that allows players to guess random phrases by guessing letter each characters
 in the phrase.
 
