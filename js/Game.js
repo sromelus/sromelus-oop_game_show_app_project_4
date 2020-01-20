@@ -52,7 +52,8 @@
    /**
    * remove a life(heart) from the game.
    * keep count of life lost
-   * if one life left make background color move live a heartbeat
+   * if there is only one life left background color changes to red and move from a pale red to a bright red
+   * to give it a sense of a suspense like a live heartbeat
    * if life lost count equal 5 end the game by calling gameOver()
    **/
    removeLife(){
