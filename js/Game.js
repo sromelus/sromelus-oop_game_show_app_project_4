@@ -102,9 +102,11 @@
      const gameOverMessage = document.querySelector('#game-over-message');
      const buttonReset = document.querySelector('#btn__reset');
      if(this.checkForWin()){
-       gameOverMessage.innerText = 'You Win!'
+       gameOverMessage.innerText = 'You Win!';
+       gameOverMessage.className = 'win';
      } else{
-       gameOverMessage.innerText = 'Sorry, try again next time!'
+       gameOverMessage.innerText = 'Sorry, try again next time!';
+       gameOverMessage.className = 'lose';
      }
      buttonReset.innerText = 'Play Again';
    }
@@ -121,7 +123,7 @@
        button.disabled = false;
      })
      document.querySelectorAll('#scoreboard img').forEach(li => {
-       li.src = "images/liveHeart.png"
+       li.src = "images/liveHeart.png";
      })
    }
  }
