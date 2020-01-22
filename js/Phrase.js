@@ -7,7 +7,6 @@
      this.phrase = phrase.toLowerCase();
    }
 
-
    /**
    * add each character of a random phrase on start game screen
    **/

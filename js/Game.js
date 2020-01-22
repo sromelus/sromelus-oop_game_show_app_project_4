@@ -118,6 +118,7 @@
    **/
    resetGame(){
      document.querySelector('#phrase ul').innerHTML = '';
+     document.querySelector('.main-container').classList.remove('onelife');
      document.querySelectorAll('#qwerty button').forEach(button => {
        button.className = 'key';
        button.disabled = false;
