@@ -100,13 +100,14 @@
    gameOver(){
      document.querySelector('#overlay').style.display = '';
      const gameOverMessage = document.querySelector('#game-over-message');
+     const overlay = document.querySelector('#overlay');
      const buttonReset = document.querySelector('#btn__reset');
      if(this.checkForWin()){
        gameOverMessage.innerText = 'You Win!';
-       gameOverMessage.className = 'win';
+       overlay.className = 'win';
      } else{
        gameOverMessage.innerText = 'Sorry, try again next time!';
-       gameOverMessage.className = 'lose';
+       overlay.className = 'lose';
      }
      buttonReset.innerText = 'Play Again';
    }
